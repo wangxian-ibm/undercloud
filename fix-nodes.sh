@@ -8,7 +8,7 @@ do
    echo "processing $item"
    ssh-keygen -f "/root/.ssh/known_hosts" -R $item   
    ssh -o StrictHostKeyChecking=no -o ConnectTimeout=3 ubuntu@$item "sudo cp ~/.ssh/authorized_keys /root/.ssh"
-   ssh -o StrictHostKeyChecking=no -o ConnectTimeout=3 root@$item "exit"
+   ssh -o StrictHostKeyChecking=no -o ConnectTimeout=3 root@$item "uptime"
 
 done
 
